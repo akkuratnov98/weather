@@ -37,7 +37,7 @@ Vue.component('weather-list', {
 
 /*
 var app = new Vue({
-    el: '#start',
+    el: '#app',
     template: '<weather-list :weathers="weathers" />',
     data: {
         weathers: []

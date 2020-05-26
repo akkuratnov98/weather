@@ -12,13 +12,18 @@
         components: {
             WeatherRow
         },
-        created: function () {
-            weatherApi.get().then(result =>
-                result.json().then(data =>
-                    data.forEach(weather => this.weathers.push(weather))
-                )
-            )
+        data(){
+            return{
+                weather: null
+            }
         }
+        // created: function () {
+        //     weatherApi.get().then(result =>
+        //         result.json().then(data =>
+        //             data.forEach(weather => this.weathers.push(weather))
+        //         )
+        //     )
+        // }
     }
 </script>
 
