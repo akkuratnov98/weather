@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.2.6.RELEASE"
+}
+
+group 'weather'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //Для порта Ардуина
+    compile group: 'com.fazecast', name: 'jSerialComm', version: '2.6.2'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.2.7.RELEASE', ext: 'pom'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.7.RELEASE'
+
+    //Для Базы данных
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.3.0.RELEASE'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.12'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    compile group: 'org.glassfish.jaxb', name: 'jaxb-core', version: '2.3.0.1'
+    compile group: 'javax.xml', name: 'jaxb-impl', version: '2.1'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+
+
+}
